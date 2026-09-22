@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Offline AI Clock</title>
+<meta name="description" content="Help for Offline AI Clock: what you can say, why an alarm did not ring, iPad, accessibility, and how to get in touch.">
+<style>
+  :root { --bg:#000; --surface:#0d0e10; --line:#2a2d32; --ink:#fff; --ink-2:#9ba2aa; --ink-3:#676e76; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.7 -apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Roboto,sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; padding:64px 24px 96px; }
+  h1 { font-size:clamp(28px,6vw,40px); margin:0 0 10px; letter-spacing:-0.02em; font-weight:600; }
+  .lede { color:var(--ink-2); margin:0 0 40px; }
+  h2 { font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3);
+       margin:52px 0 16px; font-weight:600; }
+  .q { background:var(--surface); border:1px solid var(--line); border-radius:18px;
+       padding:22px 24px; margin:12px 0; }
+  .q h3 { margin:0 0 8px; font-size:17px; font-weight:600; }
+  .q p  { margin:0 0 10px; color:var(--ink-2); }
+  .q p:last-child { margin-bottom:0; }
+  .say { display:grid; gap:8px; list-style:none; padding:0; margin:0; }
+  .say li { background:var(--surface); border:1px solid var(--line); border-radius:999px;
+            padding:11px 20px; color:var(--ink); font-size:16px; }
+  code { background:var(--surface); border:1px solid var(--line); border-radius:6px;
+         padding:1px 6px; font-size:14px; }
+  a { color:var(--ink); }
+  footer { border-top:1px solid var(--line); margin-top:56px; padding-top:24px;
+           color:var(--ink-3); font-size:14px; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#fff; --surface:#f4f5f7; --line:#e2e4e8; --ink:#000; --ink-2:#565c63; --ink-3:#8a9097; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Support</h1>
+  <p class="lede">Offline AI Clock for iPhone and iPad. If the answer is not
+  here, email is at the bottom and it is read by a person.</p>
+
+  <h2>Things you can say</h2>
+  <ul class="say">
+    <li>Wake me at 6:30 on weekdays</li>
+    <li>Set an alarm for quarter to seven tomorrow</li>
+    <li>Alarm at 7am every Monday and Thursday called gym</li>
+    <li>Remind me to take my pills at 9am</li>
+    <li>Wake me in 20 minutes</li>
+    <li>Change my 7am alarm to 7:30 · Make it half an hour earlier</li>
+    <li>Turn the 7am one off · Switch my alarm back on</li>
+    <li>Delete the 7am alarm · Turn off all my alarms</li>
+    <li>Twenty minute timer for the rice · Time the pasta for 9 minutes</li>
+    <li>Add 5 minutes to my timer · Pause my timer · How long is left?</li>
+    <li>What time is it in Tokyo? · What time is it in London and Tokyo?</li>
+    <li>Add Singapore to my world clock · How far ahead is Tokyo?</li>
+    <li>How long until my next alarm? · How many alarms do I have?</li>
+    <li>What does my day look like?</li>
+    <li>Start the stopwatch · Lap · Reset the stopwatch</li>
+  </ul>
+
+  <p class="lede" style="margin-top:14px">If you leave something out, it asks:
+  say “set an alarm” and it replies “What time?”, and the next thing you type
+  finishes the job.</p>
+
+  <h2>Alarms</h2>
+
+  <div class="q">
+    <h3>My alarm did not ring</h3>
+    <p>Almost always notification permission. Open Settings in the app: if the
+    Reminders section says notifications are off, tap <strong>Allow</strong>, or
+    <strong>Open</strong> to fix it in iOS Settings.</p>
+    <p>If permission is on and it still did not ring, check these three, in this
+    order:</p>
+    <p><strong>1. The alarm's own switch.</strong> A one-off alarm switches
+    itself off after it rings, by design.</p>
+    <p><strong>2. Scheduled Summary.</strong> In iOS Settings → Notifications →
+    Scheduled Summary, if Offline AI Clock is in the list, its alarms are being
+    held back and delivered in a batch. Remove it from the summary.</p>
+    <p><strong>3. The ring/silent switch.</strong> Notification sounds follow it.
+    See the next answer.</p>
+  </div>
+
+  <div class="q">
+    <h3>Will it wake me through a Focus or Do Not Disturb?</h3>
+    <p>Yes. Alarms are real system alarms: they ring persistently, through a
+    Focus — including Sleep Focus, which is exactly when an alarm matters — and
+    through Silent mode, with the app closed. You do not have to add the app to
+    any allow-list.</p>
+    <p>The first time, open <strong>Alarms</strong> and tap <strong>Allow</strong>
+    on the banner at the top. Until you do, alarms fall back to a notification,
+    which arrives but will not wake you.</p>
+    <p>If you would rather it did not, iOS Settings → Notifications → Offline AI
+    Clock → <strong>Time Sensitive Notifications</strong> turns that off for
+    this app.</p>
+    <p>The heads-up reminder and the wind-down nudge are deliberately
+    <em>not</em> marked Time Sensitive. They are conveniences, and an app that
+    marks everything urgent has marked nothing urgent.</p>
+  </div>
+
+  <div class="q">
+    <h3>What about the silent switch, and volume?</h3>
+    <p>A real alarm ignores the ring/silent switch, the same way Apple's Clock
+    does — that is the whole point of it being an alarm rather than a
+    notification. The heads-up reminder before it is an ordinary notification
+    and does follow the silent switch.</p>
+    <p>If you tapped <strong>Don't Allow</strong> on the alarm permission, the
+    app is back to notifications and the silent switch does apply. You can turn
+    it on later from the banner on the Alarms screen. Either way,
+    <strong>test one alarm overnight before you depend on it.</strong> We would
+    rather say this plainly than have you find out on the morning of a flight.</p>
+  </div>
+
+  <div class="q">
+    <h3>What is the heads-up reminder?</h3>
+    <p>A notification a set number of minutes before an alarm rings — fifteen by
+    default. It is there so a 6:30 alarm is never a shock. Change it for all
+    alarms in Settings → Reminders, or for one alarm in its own editor.</p>
+    <p>Set it to <em>Off</em> if you only want the alarm itself.</p>
+  </div>
+
+  <div class="q">
+    <h3>Why did a one-off alarm switch itself off?</h3>
+    <p>Alarms set for a single occasion retire after they ring, so the list does
+    not fill up. Repeating alarms stay on.</p>
+  </div>
+
+  <div class="q">
+    <h3>It said my alarms were recovered</h3>
+    <p>The app keeps a second copy of your alarm list beside the first. If the
+    main file is ever unreadable — after a device restore, usually — it restores
+    from that copy and tells you, rather than quietly showing an empty list.</p>
+    <p>Check the times are what you expect. If it says your alarms could not be
+    read at all, the damaged file has been kept rather than deleted, so nothing
+    is lost for good; please get in touch before you delete the app.</p>
+  </div>
+
+  <h2>The assistant</h2>
+
+  <div class="q">
+    <h3>Does anything I type get sent anywhere?</h3>
+    <p>No. The model is inside the app and runs on your device. The app has no
+    network code at all — try it in Airplane Mode, everything works the same.</p>
+    <p>Nothing you type is written to disk, used to train anything, or kept
+    after you clear the conversation.</p>
+  </div>
+
+  <div class="q">
+    <h3>The first answer took a moment</h3>
+    <p>The model is loaded the first time you open the Ask tab, which takes a
+    few seconds. Alarms, timers and everything you ask it to <em>do</em> happen
+    immediately regardless — the app understands those itself and never waits
+    for the model.</p>
+    <p>On an older device, replies are slower to write out. The alarm is already
+    set before the first word appears.</p>
+  </div>
+
+  <div class="q">
+    <h3>It got my sentence wrong</h3>
+    <p>If it was not sure, it shows you what it thinks you meant and waits for
+    you to tap <strong>Set it</strong> — nothing is created until you do. If it
+    was sure and still got it wrong, every answer that changed something has an
+    <strong>Undo</strong> under it.</p>
+    <p>Phrases it is reliable with are listed at the top of this page. If one of
+    yours does not work and you think it should, please send it in.</p>
+  </div>
+
+  <div class="q">
+    <h3>Can it be wrong about a time?</h3>
+    <p>The times, dates and durations you see are worked out by the app, not by
+    the model — the same code that runs the clock. The model only adds a
+    sentence of its own alongside, and if that sentence contains a figure it is
+    thrown away before it reaches you. It is the one thing in the app that is
+    never allowed to state a number.</p>
+  </div>
+
+  <div class="q">
+    <h3>Can I turn the AI part off?</h3>
+    <p>Settings → Assistant → <strong>Written notes</strong>. With it off the
+    assistant still understands everything it did before and still sets your
+    alarms and timers; it simply stops adding a sentence of its own.</p>
+  </div>
+
+  <h2>iPad</h2>
+
+  <div class="q">
+    <h3>Is there an iPad version?</h3>
+    <p>The same app, with its own interface rather than the phone one enlarged:
+    a sidebar that is always on screen, a clock face sized to be read from
+    across a room, your alarm list beside the alarm you are reading, and the
+    timer you are setting beside the ones already running.</p>
+    <p>Both orientations are supported, and the layout changes between them
+    rather than just rotating.</p>
+  </div>
+
+  <div class="q">
+    <h3>It looks cramped in Split View</h3>
+    <p>In a narrow Split View or Slide Over slot there is not much room left
+    after the sidebar. Use the app full screen, or as the wider side of a Split
+    View, until this is improved.</p>
+  </div>
+
+  <h2>World clock, timers and the stopwatch</h2>
+
+  <div class="q">
+    <h3>I cannot find my city</h3>
+    <p>Search by the nearest large city or by the country — “india”, “uk”,
+    “nyc” all work. The list is the device's own time-zone database, so if iOS
+    knows the zone, it is there.</p>
+  </div>
+
+  <div class="q">
+    <h3>Do timers keep running if I close the app?</h3>
+    <p>Yes, and a timer that ends while the app is closed <strong>rings like an
+    alarm</strong> — persistently, through Silent mode and through a Focus —
+    rather than chiming once and giving up. It is the same mechanism the alarms
+    use, so the same one-time <strong>Allow</strong> covers both.</p>
+    <p>Timers and the stopwatch work from a fixed end time rather than counting
+    ticks, so they are exactly right when you come back to them, however long
+    the app was away.</p>
+  </div>
+
+  <div class="q">
+    <h3>Can I add time to a timer that is already running?</h3>
+    <p>Yes — say “add five minutes to my timer”, or use the timer's own
+    controls. It keeps the one timer running and moves its end, rather than
+    starting a second one beside it.</p>
+  </div>
+
+  <h2>Accessibility</h2>
+
+  <div class="q">
+    <h3>Can I make the text bigger?</h3>
+    <p>Yes — the app follows your iOS <strong>Text Size</strong> setting
+    (Settings → Display &amp; Brightness → Text Size, or Accessibility → Display
+    &amp; Text Size for the larger range). Labels, headings and answers all grow
+    with it.</p>
+    <p>The clock's own digits stay the size they are on purpose: they are
+    already the largest thing on the screen and they are sized against the dial.</p>
+  </div>
+
+  <div class="q">
+    <h3>Does it work with VoiceOver?</h3>
+    <p>Every control is labelled, alarm rows announce their time and their
+    switch separately, and the tabs report which one is selected. If you hit
+    something VoiceOver reads badly, please tell us what it said — that is the
+    kind of report that gets fixed quickly.</p>
+  </div>
+
+  <h2>General</h2>
+
+  <div class="q">
+    <h3>Why does it need iOS 26?</h3>
+    <p>Because a real alarm needs it. Ringing persistently, through Silent mode
+    and through a Focus, with the app closed, is something iOS only opened to
+    apps other than Apple's own Clock in iOS 26.</p>
+    <p>On anything older the app could only send a notification — one short
+    sound, silenced by the ring switch, gone in seconds — while still calling
+    itself an alarm clock. We would rather not be installable on a device we
+    cannot keep that promise on.</p>
+    <p>iOS 26 runs on <strong>iPhone 11 and later</strong>, which includes both
+    generations of iPhone SE from 2020 onwards. It does not run on iPhone XR,
+    XS, X, 8 or older. On iPad it needs an iPad (8th generation or later), iPad
+    Air (3rd generation or later), iPad mini (5th generation or later), or any
+    iPad Pro 11-inch or 12.9-inch from 2018 onwards.</p>
+  </div>
+
+  <div class="q">
+    <h3>Why is the download so large?</h3>
+    <p>The language model ships inside the app — about 800&nbsp;MB — so that it
+    works with no download, no account and no connection. That size is the price
+    of it being genuinely offline, and it is paid once.</p>
+  </div>
+
+  <div class="q">
+    <h3>How do I get rid of my data?</h3>
+    <p>Delete the app. Everything it stores is inside it; nothing is kept
+    anywhere else, and there is no account to close.</p>
+  </div>
+
+  <h2>Contact</h2>
+  <p>Email <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a>.
+  If something went wrong, the device, the iOS version and what you typed are
+  usually enough to find it.</p>
+
+  <footer>
+    <p>Offline AI Clock for iPhone and iPad. Requires iOS 26 or later.
+    Built with Llama.</p>
+  </footer>
+
+</div>
+</body>
+</html>
